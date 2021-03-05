@@ -11,7 +11,8 @@ namespace VendorManager.Tests
   {
     public void Dispose()
     {
-      Vendor.ClearAll();
+      Vendor.ClearAll(1);
+      Vendor.ClearAll(2);
     }
 
     [TestMethod]
@@ -42,6 +43,15 @@ namespace VendorManager.Tests
       string desc01 = "Delicious patisserie";
       Vendor newVendor1 = new Vendor(name01, desc01);
       Assert.AreEqual(Vendor.FindVendors(1), newVendor1);
+    }
+    [TestMethod]
+    public void ClearAll_ClearsVendors_Vendor()
+    {
+      string name01 = "French Bakery Vendor";
+      string desc01 = "Delicious patisserie";
+      Vendor newVendor1 = new Vendor(name01, desc01);
+      Vendor.ClearAll(1);
+      Assert.AreEqual(Vendor.GetVendors().Count, 0);
     }
 
     //   public void AddVendor_AddsVendorToVendorInstances_VendorInstances()
