@@ -31,6 +31,15 @@ namespace ToDoList.Controllers
       Vendor newVendor = new Vendor(vendorName, vendorDescription);
       return RedirectToAction("Index");
     }
-
+      [HttpGet("/vendors/{id}")]
+      public ActionResult Show(int id)
+      {
+        Dictionary<string, object> model = new Dictionary<string, object>();
+        Vendor selectedCategory = Vendor.FindVendors(id);
+        List<Order> vendorOrders = selectedCategory.CurrentOrdersList;
+        model.Add("vendor", selectedCategory);
+        model.Add("orders", vendorOrders);
+        return View(model);
+      }
   }
 }

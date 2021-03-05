@@ -7,9 +7,9 @@
 <h3>Here are all the items in this category:</h3>
 
 <ol>
-@foreach (Order order in @Model["CurrentOrdersList"])
+@foreach (Order order in @Model["orders"])
 {
-  <li><a href='/vendors/@Model["vendors"].Id/currentorderlist/@order.Id'>@order.Description</a></li>
+  <li><a href='/vendors/@Model["vendors"].Id/orders/@order.Id'>@order.Description</a></li>
 }
 </ol>
 
