@@ -56,7 +56,7 @@ namespace VendorManager.Tests
 
 
     [TestMethod]
-    public void AddVendor_AddsVendorToVendorInstances_VendorInstances()
+    public void AddVendor_AddsOrderToCurrentOrdersList_OrderList()
     {
       string name = "Flour Purchase";
       string description = "10 bags of flour.";
