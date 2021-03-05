@@ -21,5 +21,9 @@ namespace VendorManager.Models
     {
       return VendorInstances[searchId - 1];
     }
+    public void AddOrder(Order order)
+    {
+      CurrentOrdersList.Add(order);
+    }
   }
 }

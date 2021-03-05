@@ -54,16 +54,23 @@ namespace VendorManager.Tests
       Assert.AreEqual(Vendor.GetVendors().Count, 0);
     }
 
-    //   public void AddVendor_AddsVendorToVendorInstances_VendorInstances()
-    //   {
-    //     string name01 = "French Bakery Vendor";
-    //     string desc01 = "Delicious patisserie";
-    //     Vendor newVendor1 = new Vendor(name01, desc01);
-    //     Vendor newVendor2 = new Vendor(name01, desc01);
-    //     List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
-    //     List<Vendor> result = Vendor.GetVendors();
-    //     CollectionAssert.AreEqual(newList, result);
-    //   }
+
+    [TestMethod]
+    public void AddVendor_AddsVendorToVendorInstances_VendorInstances()
+    {
+      string name = "Flour Purchase";
+      string description = "10 bags of flour.";
+      string price = "$300";
+      string date = "04/05/20";
+      Order newOrder = new Order(name, description, price, date);
+      List<Order> newList = new List<Order> { newOrder };
+      Vendor newVendor = new Vendor(name, description);
+      newVendor.AddOrder(newOrder);
+
+      List<Order> result = newVendor.CurrentOrdersList;
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
 
