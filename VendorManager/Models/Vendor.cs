@@ -25,5 +25,9 @@ namespace VendorManager.Models
     {
       CurrentOrdersList.Add(order);
     }
+    public List<Order> GetOrders()
+    {
+      return CurrentOrdersList;
+    }
   }
 }

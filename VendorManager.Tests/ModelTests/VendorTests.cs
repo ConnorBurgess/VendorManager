@@ -71,6 +71,21 @@ namespace VendorManager.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetOrders_ReturnsAllOrders_CurrentOrderList()
+    {
+      string name = "Flour Purchase";
+      string description = "10 bags of flour.";
+      string price = "$300";
+      string date = "04/05/20";
+      Vendor newVendor = new Vendor(name, description);
+      Order newOrder = new Order(name, description, price, date);
+      List<Order> newList = new List<Order> { newOrder };
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.GetOrders();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
 
