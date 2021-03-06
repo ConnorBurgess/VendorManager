@@ -54,7 +54,6 @@ namespace VendorManager.Tests
       Assert.AreEqual(Vendor.GetVendors().Count, 0);
     }
 
-
     [TestMethod]
     public void AddVendor_AddsOrderToCurrentOrdersList_OrderList()
     {

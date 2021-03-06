@@ -10,8 +10,10 @@ namespace VendorManager.Models
       Description = description;
       OrderInstances.Add(this);
       Id = OrderInstances.Count;
-
     }
-
+    public static Order FindOrder(int searchId)
+    {
+      return OrderInstances[searchId-1];
+    }
   }
 }

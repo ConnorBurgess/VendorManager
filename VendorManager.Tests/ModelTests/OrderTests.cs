@@ -22,6 +22,17 @@ namespace VendorManager.Tests
       List<Order> newList = new List<Order> { newOrder };
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+        [TestMethod]
+    public void FindOrder_ReturnsOrder_Order()
+    {
+      string name = "Flour Purchase";
+      string description = "10 bags of flour.";
+      string price = "$300";
+      string date = "04/05/20";
+      Order newOrder = new Order(name, description, price, date);
+      List<Order> newList = new List<Order> { newOrder };
+      Assert.AreEqual(Order.FindOrder(2), newOrder);
+    }
   }
 }
 

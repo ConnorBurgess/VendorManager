@@ -12,7 +12,7 @@ namespace VendorManager.Models
 
     protected static List<Vendor> VendorInstances = new List<Vendor> { };
     protected static List<Order> OrderInstances = new List<Order> { };
-    protected List<Order> CurrentOrdersList = new List<Order> { };
+    public List<Order> CurrentOrdersList = new List<Order> { };
     public static void ClearAll(int i)
     {
       if (i == 1)

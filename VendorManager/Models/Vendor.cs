@@ -3,7 +3,6 @@ namespace VendorManager.Models
 {
   public class Vendor : Manager
   {
-
     public Vendor(string name, string description)
     {
       this.Name = name;
@@ -16,6 +15,10 @@ namespace VendorManager.Models
     {
       return VendorInstances;
     }
+    public List<Order> GetOrders()
+    {
+      return CurrentOrdersList;
+    }
 
     public static Vendor FindVendors(int searchId)
     {
@@ -24,10 +27,6 @@ namespace VendorManager.Models
     public void AddOrder(Order order)
     {
       CurrentOrdersList.Add(order);
-    }
-    public List<Order> GetOrders()
-    {
-      return CurrentOrdersList;
     }
   }
 }
