@@ -28,8 +28,8 @@ Project creates a vendor management solution for businesses to keep track of sep
 * Type $"dotnet run" (no bling / quotes) in terminal to run program
 * Navigate to ./VendorManager.Tests and type $"dotnet test" (no bling / quotes) in terminal to run tests
 
-# Setup Tailwind
-* Type $"npm install" (no bling / quotes) in terminal in order to install dependencies
+## Setup Tailwind
+* Navigate to ./VendorManager inside the cloned repo and type $"npm install" (no bling / quotes) in terminal in order to install dependencies.
 * Run $"npx tailwind build ./wwwroot/css/site.css -o ./wwwroot/css/output.css" (no bling / quotes) in order to run build CSS. 
 
 
