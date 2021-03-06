@@ -3,7 +3,7 @@
 * * *
 
 ## Description  
-Project creates a vendor management solution for businesses to keep track of separate vendors and orders. Utilizes ASP.Net Core MVC for HTTP structure and follows RESTful practices. Uses MSTest for unit testing models. Primarily uses Tailwind utility classes to style pages.
+Project creates a vendor management solution for businesses to keep track of separate vendors and orders. Utilizes ASP.Net Core MVC for HTTP structure and follows RESTful practices. Uses MSTest for unit testing models. Project styled using [Tailwind](https://tailwindcss.com/) utility classes.
 
 * * *
 
@@ -23,15 +23,14 @@ Project creates a vendor management solution for businesses to keep track of sep
 
 * Ensure .Net v5.0 Core is installed: [download here](https://dotnet.microsoft.com/download/dotnet/5.0)
 * Ensure dotnet script is installed: [instructions here](https://github.com/filipw/dotnet-script)
-* Clone Repo from GitHub (Link: https://github.com/ConnorBurgess/PierresBakery.git)
-* Navigate to ./Bakery inside of the cloned repo and type $"dotnet restore" (no bling / quotes) in terminal
+* Clone Repo from GitHub (Link: https://github.com/ConnorBurgess/VendorManager.git)
+* Navigate to ./VendorManager inside of the cloned repo and type $"dotnet restore" (no bling / quotes) in terminal
 * Type $"dotnet run" (no bling / quotes) in terminal to run program
+* Navigate to ./VendorManager.Tests and type $"dotnet test" (no bling / quotes) in terminal to run tests
 
 # Setup Tailwind
-* 
-
-## Setup - Tests
-
+* Type $"npm install" (no bling / quotes) in terminal in order to install dependencies
+* Run $"npx tailwind build ./wwwroot/css/site.css -o ./wwwroot/css/output.css" (no bling / quotes) in order to run build CSS. 
 
 
 * * *
