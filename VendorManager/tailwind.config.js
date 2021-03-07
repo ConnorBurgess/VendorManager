@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'vendormanager-pattern': "url('https://images.pexels.com/photos/192933/pexels-photo-192933.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')",
+        'vendormanager-pattern': "url('https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')",
 
       }),
       keyframes: {
@@ -18,7 +18,7 @@ module.exports = {
       },
     },
     container: {
-      center: true,
+
     },
   },
   variants: {
