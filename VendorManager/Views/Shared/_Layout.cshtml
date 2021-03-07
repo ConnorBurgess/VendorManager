@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Vendor Manager</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="~/css/output.css" />
+  <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="bg-vendormanager-pattern bg-cover">
+  <div class="float-right animate-wiggle"><a href='/'><img src="https://i.ibb.co/KX5SMp5/logo.png" alt="logo"
+        border="0"></a></div>
+  <div class="h-2">
+    <div class="transform transition duration-500 hover:scale-110">
+    </div>
+    @Html.Partial("Sidebar")
+    @RenderBody()
+    @Html.Partial("Footer")
+  </div>
+</body>
+</html>
