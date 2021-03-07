@@ -1,36 +1,34 @@
 @{
   Layout = "_Layout";
 }
-@* <div class=" mx-auto flex-col w-full h-screen lg:flex rounded-lg overflow-hidden my-2 opacity-75 grid grid-cols-3 gap-4">
-  <div
-    class="my-32 max-w-screen-lg bg-white border-2 border-gray-300 p-5 py-32 rounded-md tracking-wide shadow-lg border-double border-8 border-light-blue-500">
-    <div class="md:flex>  *@
-      @using VendorManager.Models;
-            <h3 class="text-4xl text-blue-900 text-opacity-75 transform transition duration-500 hover:scale-110 no-underline
-      ml-64"><a href='/vendors/new'>Add a new Vendor</a></h3>
-      <h1 class=" text-4xl md:justify-center mb-6 items-center">Current Vendors:</h1>
-
-      @if (@Model.Count == 0)
-      {
-
-        <h3>No Vendors have been added to the manager</h3>
-      }
-      @foreach (Vendor vendor in Model)
-      {
-        <div bg-blue> 
-        <p>Name: @vendor.Name</p>
-        <P>@vendor.Description</P> 
-          <h3 class="text-white"><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>
-        </div>
-      }
-      @* @for (int i = 0; i <= 10; i++)
+@using VendorManager.Models;
+<div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
+  <div class="relative py-3 max-w-screen mx-auto">
+    <div class="object-center ">
+      <table class="shadow-lg bg-white rounded-md ">
+        <tr>
+          <th class="bg-blue-100 border text-left px-8 py-4">Vendor Name</th>
+          <th class="bg-blue-100 border text-left px-8 py-4">Description</th>
+          <th class="bg-blue-100 border text-left px-8 py-4">Number of Orders</th>
+        </tr>
+        <tr>
+          <td class="border px-8 py-4 text-red-900 animate-pulse"><a href='/vendors/new'>Add a new Vendor</a></td>
+          <td class="border px-8 py-4">@Model.Count Vendors</td>
+        </tr>
+        @if (@Model.Count == 0)
         {
-        <div class="inline-block px-3">
-        <div
-        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-grey hover:shadow-xl transition-shadow
-        duration-300 ease-in-out">
-        </div>
-        </div>
-        } *@
 
-      <p><a href='/'></a>Return to Main Page</a></p>
+          <h3>No Vendors have been added to the manager</h3>
+        }
+        @foreach (Vendor vendor in Model)
+        {
+          <tr>
+            <td class="border px-8 py-4"><a href='/vendors/@vendor.Id'>@vendor.Name</a></td>
+            <td class="border px-8 py-4">@vendor.Description</td>
+            <td class="border px-8 py-4">@vendor.CurrentOrdersList.Count Orders</td>
+          </tr>
+        }
+      </table>
+    </div>
+  </div>
+</div>
