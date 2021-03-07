@@ -1,11 +1,32 @@
 @{
   Layout = "_Layout";
 }
-
-<h1>Vendor Details: </h1>
-
-<h2>@Model["order"].Description</h2>
-<h3>Category: @Model["vendor"].Name</h3>
-
-<a href='/vendors/@Model["vendor"].Id/orders/new'>Add another item</a>
-<a href='/vendors'>View all categories</a>
+@using VendorManager.Models;
+<div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
+  <div class="relative py-3 max-w-screen mx-auto">
+    <div class="object-center ">
+      <table class="shadow-lg bg-white rounded-md ">
+        <tr>
+          <th class="bg-blue-100 border text-left px-8 py-4">Ordered From</th>
+           <th class="bg-blue-100 border text-left px-8 py-4">Order Name</th>         
+          <th class="bg-blue-100 border text-left px-8 py-4">Description</th>
+          <th class="bg-blue-100 border text-left px-8 py-4">Price</th>
+          <th class="bg-blue-100 border text-left px-8 py-4">Date</th>
+        </tr>
+        <tr>
+          <th class="bg-yellow-100 border text-left px-8 py-4"> @Model["vendor"].Name</th>
+           <th class="border text-left px-8 py-4">@Model["order"].Name</th>         
+          <th class="border text-left px-8 py-4">@Model["order"].Description</th>
+          <th class="border text-left px-8 py-4">@Model["order"].Price</th>
+          <th class="border text-left px-8 py-4">@Model["order"].Date</th>
+        </tr>
+                <tr>
+          <th class="bg-red-100 border text-left px-8 py-4 animate-pulse"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another item</a></th>
+        </tr>
+                        <tr>
+          <th class="bg-blue-100 border text-left px-8 py-4"><a href='/vendors/@Model["vendor"].Id/orders/'>Return to Vendor</a></th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
