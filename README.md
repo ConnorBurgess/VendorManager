@@ -37,7 +37,10 @@ Project creates a vendor management solution for businesses to keep track of sep
 
 ## To Do:
 
-
+## Resources Used:
+* Landing Page - Freepik [here](https://tailwindcomponents.com/component/business-page)
+* Card Sidebar nav [here](https://tailwindcomponents.com/component/card-sidebar-navigation)
+* Create form [here](https://tailwindcomponents.com/component/form-create)
 ## Additional comments:
 * Created on 3/5/21  
 * * *
