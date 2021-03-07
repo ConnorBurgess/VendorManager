@@ -1,6 +1,8 @@
 # Vendor Manager
 #### Created By: Connor Burgess 
 * * *
+<p align="center"><img src="VendorManager/wwwroot/assets/images/thumb.jpg" alt="Vendor Manager"
+	title="Vendor Manager" width="350" height="200"></p>
 
 ## Description  
 Project creates a vendor management solution for businesses to keep track of separate vendors and orders. Utilizes ASP.Net Core MVC for HTTP structure and follows RESTful practices. Uses MSTest for unit testing models. Project styled using [Tailwind](https://tailwindcss.com/) utility classes.
@@ -41,7 +43,7 @@ Project creates a vendor management solution for businesses to keep track of sep
 * Landing Page - Freepik [here](https://tailwindcomponents.com/component/business-page)
 * Card Sidebar nav [here](https://tailwindcomponents.com/component/card-sidebar-navigation)
 * Create form [here](https://tailwindcomponents.com/component/form-create)
-* Background image - Pexels [here](https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+* Background - Pexels [here](https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 
 ## Additional comments:
 * Created on 3/5/21  
