@@ -11,9 +11,6 @@ namespace ToDoList.Controllers
     [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      string name01 = "French Bakery Vendor";
-      string desc01 = "Delicious patisserie";
-      Vendor newVendor1 = new Vendor(name01, desc01);
       List<Vendor> allVendors = Vendor.GetVendors();
       return View(allVendors);
     }
@@ -24,7 +21,7 @@ namespace ToDoList.Controllers
       return View();
     }
 
-    //Create a new category
+    //Create a new Vendor
     [HttpPost("/vendors")]
     public ActionResult Create(string vendorName, string vendorDescription)
     {

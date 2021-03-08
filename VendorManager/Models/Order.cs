@@ -4,9 +4,11 @@ namespace VendorManager.Models
   public class Order : Manager
   {
 
-    public Order(string name, string description, string price, string date)
+    public Order(string name, string description, string price, string date, string endingDate)
     {
-      this.Name = name;
+      Name = name;
+      Price = price;
+      Date = date + " - " + endingDate;
       Description = description;
       OrderInstances.Add(this);
       Id = OrderInstances.Count;

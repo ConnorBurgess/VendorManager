@@ -32,17 +32,16 @@ namespace VendorManager.Controllers
       return View(model);
     }
 
-     // This creates new Items within a given Category, not new Categories:
-
+     // This creates new Orders within a given Vendor, not new Vendors:
     [HttpPost("/vendors/{vendorid}/orders")]
-    public ActionResult Create(int vendorid, string orderid, string orderTitle, string orderDescription, string orderPrice, string orderDate)
+    public ActionResult Create(int vendorid, string orderid, string orderTitle, string orderDescription, string orderPrice, string orderDate, string endingDate)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.FindVendors(vendorid);
-      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate, endingDate);
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.CurrentOrdersList;
-      model.Add("orders", vendorOrders);
+      model.Add("order", newOrder);
       model.Add("vendor", foundVendor);
       return View("Show", model);
     }

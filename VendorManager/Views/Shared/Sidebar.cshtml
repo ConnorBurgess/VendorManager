@@ -1,3 +1,7 @@
+@using VendorManager.Models;
+@using System.Web;
+@* Not yet implemented - dynamic add list to sidebar *@
+@* @Html.Action("LayoutPartial", "Partials") *@
 <div
     class="overflow-hidden shadow-lg border-t-4 bg-white mt-8 mb-4 rounded-b-lg rounded-t border-red-light w-full md:w-1/6 absolute">
     <div class="px-6 py-4 mb-2 mt-4 mb-8">
@@ -26,6 +30,7 @@
             <div class="pl-2"><a href='/vendors'> Orders </a></div>
         </div>
         <div class="uppercase tracking-wide text-c2 mb-4 mt-8">Vendors</div>
+
         <div class="flex cursor-pointer border px-4 py-2 text-lg text-grey-darkest">
             <svg width="18" height="18" viewBox="0 0 2048 1792" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -40,8 +45,11 @@
                     <path
                         d="M1024 672q119 0 203.5 84.5t84.5 203.5-84.5 203.5-203.5 84.5-203.5-84.5-84.5-203.5 84.5-203.5 203.5-84.5zm704-416q106 0 181 75t75 181v896q0 106-75 181t-181 75h-1408q-106 0-181-75t-75-181v-896q0-106 75-181t181-75h224l51-136q19-49 69.5-84.5t103.5-35.5h512q53 0 103.5 35.5t69.5 84.5l51 136h224zm-704 1152q185 0 316.5-131.5t131.5-316.5-131.5-316.5-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5z" />
                 </svg>
-                <div class="pl-2"><a href='/vendors'> Add Order </a></div>
-            </div>
+                @* Not yet implemented *@
+                @* @foreach (Vendor vendor in Model) {
+                <div class="pl-2"><a href='/vendors/@vendor.Id/new'>@vendor.Name - Add Order</a></div>
+                } *@
+                            </div>
         </div>
     </div>
 </div>
