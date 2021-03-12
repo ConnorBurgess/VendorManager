@@ -3,6 +3,8 @@ namespace VendorManager.Models
 {
   public class Vendor : Manager
   {
+    public static List<Vendor> VendorInstances = new List<Vendor> { };
+    public List<Order> CurrentOrdersList = new List<Order> { };
     public Vendor(string name, string description)
     {
       this.Name = name;
@@ -27,6 +29,10 @@ namespace VendorManager.Models
     public void AddOrder(Order order)
     {
       CurrentOrdersList.Add(order);
+    }
+    public static void ClearAll()
+    {
+      VendorInstances.Clear();
     }
   }
 }

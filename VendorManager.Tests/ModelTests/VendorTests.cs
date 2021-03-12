@@ -11,8 +11,8 @@ namespace VendorManager.Tests
   {
     public void Dispose()
     {
-      Vendor.ClearAll(1);
-      Vendor.ClearAll(2);
+      Vendor.ClearAll();
+      Order.ClearAll();
     }
 
     [TestMethod]
@@ -50,10 +50,10 @@ namespace VendorManager.Tests
       string name01 = "French Bakery Vendor";
       string desc01 = "Delicious patisserie";
       Vendor newVendor1 = new Vendor(name01, desc01);
-      Vendor.ClearAll(1);
+      Vendor.ClearAll();
       Assert.AreEqual(Vendor.GetVendors().Count, 0);
     }
-
+    
     [TestMethod]
     public void AddVendor_AddsOrderToCurrentOrdersList_OrderList()
     {

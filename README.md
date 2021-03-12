@@ -5,7 +5,7 @@
 	title="Vendor Manager" width="350" height="200"></p>
 
 ## Description  
-Project creates a vendor management solution for businesses to keep track of separate vendors and orders. Utilizes ASP.Net Core MVC for HTTP structure and follows RESTful practices. Uses MSTest for unit testing models. Project styled using [Tailwind](https://tailwindcss.com/) utility classes.
+Project creates a vendor management solution for businesses to keep track of separate vendors and orders. Utilizes ASP.Net Core MVC and follows RESTful practices. Uses MSTest for unit testing models. Project styled using [Tailwind](https://tailwindcss.com/) utility classes.
 
 * * *
 
@@ -28,12 +28,13 @@ Project creates a vendor management solution for businesses to keep track of sep
 
 ## Setup 2) Install Tailwind
 * Navigate to ./VendorManager/VendorManager and type $"npm install" (no bling / quotes) in terminal in order to install dependencies.
-* Type $"npx tailwind build ./wwwroot/css/site.css -o ./wwwroot/css/output.css" (no bling / quotes) in terminal in order to run build CSS. 
+* Type $"npx tailwind build ./wwwroot/css/site.css -o ./wwwroot/css/output.css" (no bling / quotes) in terminal in order to build CSS. 
 
 ## Setup 3) Dotnet & Testing
 * Navigate to ./VendorManager/VendorManager inside of the cloned repo and type $"dotnet restore" (no bling / quotes) in terminal
-* Type $"dotnet run" (no bling / quotes) in terminal to run program
-* Navigate to ./VendorManager.Tests and type $"dotnet test" (no bling / quotes) in terminal to run tests
+* In order to run program input $"dotnet run" (no bling / quotes) in terminal
+* In order to run tests navigate to ./VendorManager/VendorManager.Tests inside of the cloned repo and input $"dotnet restore" (no bling / quotes) in terminal
+* From the ./VendorManager.Tests directory in terminal type $"dotnet test" (no bling / quotes) to run tests
 
 * * *
 

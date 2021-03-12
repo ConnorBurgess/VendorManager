@@ -10,19 +10,5 @@ namespace VendorManager.Models
     public string Date { get; protected set; }
     public string Price { get; protected set; }
 
-    protected static List<Vendor> VendorInstances = new List<Vendor> { };
-    protected static List<Order> OrderInstances = new List<Order> { };
-    public List<Order> CurrentOrdersList = new List<Order> { };
-    public static void ClearAll(int i)
-    {
-      if (i == 1)
-      {
-        VendorInstances.Clear();
-      }
-      else if (i == 2)
-      {
-        OrderInstances.Clear();
-      }
-    }
   }
 }
